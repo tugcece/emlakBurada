@@ -39,6 +39,7 @@ Unit Test coverages
 <img width="810" alt="Screen Shot 2024-07-22 at 09 24 50" src="https://github.com/user-attachments/assets/f3c642f4-7fa0-4052-b088-2f564a845810">
 <img width="619" alt="Screen Shot 2024-07-22 at 09 24 14" src="https://github.com/user-attachments/assets/3e09bbfb-5029-4fa9-9a76-f44639cd25b8">
 <img width="514" alt="Screen Shot 2024-07-22 at 09 23 45" src="https://github.com/user-attachments/assets/c70d9667-f319-489d-93b8-496106f392cc">
-<img width="699" alt="Screen Shot 2024-07-20 at 22 09 21" src="https://github.com/user-attachments/assets/a6b9b7ed-f8aa-4836-a293-4136d6c2c36b">
+
+Son olarak bu bootcamp süresince bizimle değerli bilgi ve birimkilerini paylaşan hocalarıma teşekkürler.
 
 
