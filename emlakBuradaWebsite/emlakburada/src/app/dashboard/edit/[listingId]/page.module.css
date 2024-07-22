@@ -1,0 +1,346 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.addListingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 90vh;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.addListing {
+  width: 95%;
+  height: 90%;
+  display: flex;
+  gap: 1rem;
+}
+.advertising {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.advertisingImage {
+  width: 90%;
+  height: 60%;
+  background-color: #08184b;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.advertisingImage img {
+  border-radius: 1rem;
+}
+
+.slogan {
+  height: 10%;
+  width: 90%;
+  color: #fe604a;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  font-weight: 600;
+  font-style: oblique;
+  padding: 1rem;
+  text-align: center;
+}
+.formContainer {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 1%;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.fullWidth {
+  width: 70%;
+}
+
+.halfWidth {
+  width: 40%;
+}
+
+.quarterWidth {
+  width: 20%;
+}
+
+.form input,
+.form textarea {
+  position: relative;
+  border: 0.01rem solid #09184b;
+  box-shadow: 0px 1.5px 0px 0px #858585;
+  padding: 0.5rem;
+  transition: all 200ms ease-in-out;
+  opacity: 0.8;
+  border-radius: 2rem;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: small;
+  font-weight: bold;
+  color: #09184b;
+  margin-bottom: 4px;
+  margin-left: 10px;
+}
+
+.inputHelper {
+  color: #fe604a;
+  font-size: 0.5rem;
+  margin-top: 6px;
+  margin-left: 1px;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+  transition: all 100ms linear;
+  z-index: -1;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgb(145, 145, 145);
+  font-size: 0.75rem;
+}
+
+.form input::after,
+.form textarea::after {
+  content: attr(placeholder);
+  position: absolute;
+  color: #161616;
+  top: 0;
+  left: 0;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border: none;
+  box-shadow: 0px 1.5px 0px 0px #09184b;
+  outline: none;
+}
+
+.form input:focus + .inputHelper {
+  visibility: visible;
+  transform: translateY(0rem);
+}
+
+.form input:focus::placeholder,
+.form textarea:focus::placeholder {
+  visibility: hidden;
+}
+
+.fileButton {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #09184b;
+  color: #fff;
+  border-style: none;
+  padding: 1em 2em;
+  border-radius: 2rem;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  transition: all 250ms;
+  width: 25%;
+}
+.fileButton input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.fileButton > svg {
+  margin-right: 1em;
+}
+.fileButton::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-radius: 0.5em;
+  background-color: #232c7c;
+  z-index: -1;
+  transition: all 350ms;
+}
+.fileButton:hover::before {
+  width: 100%;
+}
+.form textarea {
+  width: 80%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  height: 10vh;
+}
+
+.submit {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+
+.submit {
+  bottom: 6vh;
+  right: 4vw;
+  border-radius: 50px;
+  background-image: linear-gradient(135deg, #0b234a 0%, #09184b 100%);
+  box-shadow: 0 20px 30px -6px rgba(9, 24, 75, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+  color: white;
+  padding: 10px 20px;
+}
+
+.submit:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.submit:active {
+  opacity: 0.5;
+}
+
+.active input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.active {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: medium !important;
+  user-select: none;
+  border: 3px solid #beddd0;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 1.5rem;
+}
+
+.check {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #2dc38c;
+  border-bottom: 1.5px solid #2dc38c;
+  box-shadow: 0 0 1px #cef1e4, inset 0 -2.5px 3px #62eab8,
+    inset 0 3px 3px rgba(0, 0, 0, 0.34);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.active input:checked ~ .check {
+  transform: translateY(40px);
+  animation: wipeDown 0.6s ease-in-out forwards;
+}
+
+.active input:not(:checked) ~ .check {
+  transform: translateY(-40px);
+  animation: wipeUp 0.6s ease-in-out forwards;
+}
+
+@keyframes wipeDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes wipeUp {
+  0% {
+    transform: translateY(40);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.active input:checked ~ .check:after {
+  display: block;
+}
+
+.active .check:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.34);
+}
+
+
+@media (max-width: 767px) {
+  .advertising {
+    display: none;
+  }
+  .formContainer {
+    width: 100%;
+  }
+  .halfWidth {
+    width: 90%;
+  }
+  .fileButton {
+    width: 40%;
+  }
+  .addListing {
+    height: 95%;
+  }
+  .form {
+    padding-block: 1rem;
+  }
+  .submit {
+    bottom: 4vh;
+    right: 4vw;
+  }
+}

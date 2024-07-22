@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: emlakBurada-gw
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: emlakBurada-listing-service
+          uri: lb://EMLAKBURADA-LISTING-SERVICE
+          predicates:
+            - Path=/api/v1/listing/**
+        - id: emlakBurada-purchase-service
+          uri: lb://EMLAKBURADA-PURCHASE-SERVICE
+          predicates:
+            - Path=/api/v1/purchase/**
+        - id: emlakBurada-payment-service
+          uri: lb://EMLAKBURADA-PAYMENT-SERVICE
+          predicates:
+            - Path=/api/v1/payments/**
+        - id: emlakBurada-user-service
+          uri: lb://EMLAKBURADA-USER-SERVICE
+          predicates:
+            - Path=/api/v1/users/**
+        - id: emlakBurada-authentication-service
+          uri: lb://EMLAKBURADA-AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/api/v1/auth/**
+        - id: emlakBurada-logging-service
+          uri: lb://EMLAKBURADA-LOGGING-SERVICE
+          predicates:
+            - Path=/api/v1/logs/**
+server:
+  port: 8080

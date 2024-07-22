@@ -1,0 +1,391 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  overflow: auto;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalContent {
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  width: 24rem; /* 96 * 0.25rem */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem; /* rounded-md */
+  background-image: url("../../../public/images/modalbck.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75vw;
+  height: 80vh;
+  position: relative;
+}
+.textCenter {
+  text-align: center;
+}
+.textHeader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+.container {
+  height: 72vh;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+}
+
+.container form {
+  width: 100%;
+  height: 72vh;
+}
+
+.container form button[type="submit"] {
+  position: absolute;
+  bottom: 2vh !important;
+  right: 4vw;
+}
+
+.container p {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+.close {
+  display: flex;
+  justify-content: flex-end;
+  height: 2vh;
+  margin-bottom: 10px;
+}
+.closeButton {
+  background-color: #09184b;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+.dashboardContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  background-color: #09184b;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  gap: 1rem;
+}
+
+.listing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 80vh;
+  justify-content: center;
+  overflow-y: scroll;
+  padding-block: 1%;
+}
+.filterContainer {
+  display: flex;
+  height: 15vh;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.filters {
+  width: 200px;
+  height: 40px;
+  background-color: #232c7c;
+  border-radius: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter {
+  background: transparent;
+  border: none;
+  color: #939189;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.addListing {
+  width: 40px;
+  height: 40px;
+  border-radius: 2rem;
+  background-color: #232b73;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.addListing:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #232b73;
+  align-items: center;
+}
+
+.addListing:hover .svgIcon {
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.addListing::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Add listing";
+  color: white;
+  font-size: 0px;
+}
+
+.addListing:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
+}
+
+.filterIcon {
+  background: transparent;
+  border: none;
+  font-size: 1rem !important;
+}
+
+.active {
+  color: #ffe6e7;
+}
+
+.filter:hover {
+  transform: translateY(-2px);
+}
+
+.filter:focus {
+  outline: none;
+}
+.card {
+  width: 30vw;
+  height: 30vh;
+  color: white;
+  position: relative;
+  border-radius: 2.5em;
+  padding: 2em;
+  transition: transform 0.4s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 2.5em;
+}
+.card .listingContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5em;
+  height: 100%;
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+.icons {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.card .cardTop,
+.card .details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .cardTop p,
+.card .cardTop .name,
+.card .details p,
+.card .details .name {
+  margin: 0;
+}
+
+.card .name {
+  font-weight: bold;
+}
+
+.card .cardTop p,
+.card .details p {
+  font-weight: 600;
+}
+
+.card .details {
+  align-items: flex-end;
+}
+
+.card:hover {
+  transform: scale(0.97);
+}
+
+.card:hover .listingContent {
+  transform: scale(0.96);
+}
+
+.card:active {
+  transform: scale(0.9);
+}
+.card .button {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.card .button:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.pagination {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paginationButton {
+  font: inherit;
+  background-color: #232c7c;
+  border: 0;
+  color: #ffe6e7;
+  text-shadow: 0 0.0625em 0 #fff;
+  transition: 0.23s ease;
+  padding: 0.375em 1em;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+
+.paginationButton:hover {
+  translate: 0 0.225em;
+  letter-spacing: 0.1em;
+  color: #09184b;
+}
+
+.deleteButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .listing {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .card {
+    width: 70%;
+  }
+  .addListing {
+    transition-duration: 0s;
+  }
+.container form{
+  height: 65vh !important;
+}
+  .addListing:hover {
+    width: 40px;
+    transition-duration: 0s;
+  }
+
+  .addListing:hover .svgIcon {
+    transition-duration: 0s;
+    transform: none;
+  }
+
+  .addListing::before {
+    bottom: 0px;
+    content: none;
+  }
+}
+@media (min-width: 1441px) {
+  .filters {
+    width: 25%;
+    height: 30%;
+    justify-content: space-evenly;
+  }
+  .filter {
+    font-size: large;
+  }
+  .addListing {
+    width: 5vh;
+    height: 3vw;
+    border-radius: 3rem;
+  }
+  .card {
+    font-size: x-large;
+  }
+  .icons {
+    font-size: 2.5rem;
+  }
+  .addListing {
+    width: 70px;
+    height: 70px;
+    border-radius: 4rem;
+  }
+  .svgIcon {
+    width: 20px;
+  }
+  .addListing:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-400%);
+  }
+  .addListing::before {
+    bottom: -40px;
+  }
+}

@@ -1,0 +1,310 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.packageInfo {
+  height: 90vh;
+  width: 100vw;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  gap: 5%;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  color: rgba(71, 105, 220);
+  align-items: center;
+  background-image: url("../../../../public/images/backgroundUser.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
+}
+.header p {
+  font-size: xxx-large;
+  z-index: 1000;
+  color: #09184b;
+}
+
+.avatar {
+  position: absolute;
+  height: 8rem;
+  width: 8rem;
+  background: aliceblue;
+  border-radius: 4rem;
+  left: 25px;
+  bottom: 0px;
+  z-index: 100;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.avatar img {
+  border-radius: 4rem;
+}
+
+.mainContent {
+  overflow: scroll;
+  display: flex;
+  width: 45%;
+  color: rgba(71, 105, 220);
+  height: 70vh;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 2rem;
+  flex-direction: column;
+  background-color: white;
+}
+.package {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-block-start: -4rem;
+  z-index: 100;
+}
+.userContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  color: rgba(71, 105, 220);
+  border-radius: 2rem;
+  flex-direction: column;
+  background-color: white;
+}
+.userInfo {
+  display: flex;
+  width: 45%;
+  height: 80%;
+  gap: 2%;
+  border-radius: 2rem;
+  flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: hidden;
+}
+
+.user {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-block-start: -4rem;
+}
+
+.userDetails {
+  top: 2rem;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5rem;
+}
+.userDetail {
+  width: 70%;
+  height: 10%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px;
+  padding-block: 2px;
+  gap: 10%;
+  border-bottom: 0.01rem solid #09184b;
+}
+.names {
+  min-width: 20%;
+  color: #09184b;
+  font-weight: 500;
+}
+.infos {
+  min-width: 70%;
+  max-height: 100%;
+  text-align: end;
+  overflow-y: scroll;
+}
+.packageCards {
+  border-radius: 16px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 10px;
+  background-color: #09184b;
+  color: #697e91;
+  max-width: 50%;
+}
+
+.packageCards strong {
+  font-weight: 600;
+  color: #09184b;
+}
+
+.packageCards .packageDetail {
+  align-items: center;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  position: relative;
+}
+
+.packageCards .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffe6e7;
+  border-radius: 99em 0 0 99em;
+  display: flex;
+  align-items: center;
+  padding: 0.625em 0.75em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #09184b;
+}
+
+.packageCards .pricing small {
+  color: #707a91;
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+
+.packageCards .packageName {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #09184b;
+}
+
+.packageCards .packageName + * {
+  margin-top: 0.75rem;
+}
+
+.packageCards .packageInfo + * {
+  margin-top: 1rem;
+}
+
+.packageCards .packageFeatures {
+  display: flex;
+  flex-direction: column;
+}
+
+.packageCards .packageFeatures li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.packageCards .packageFeatures li + * {
+  margin-top: 0.75rem;
+}
+
+.packageCards .packageFeatures .icon {
+  background-color: #1fcac5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.packageCards .packageFeatures .icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.packageCards .packageFeatures + * {
+  margin-top: 1.25rem;
+}
+
+.packageCards .action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.packageCards .purchase {
+  background-color: #09184b;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 0.625em 0.75em;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(135deg, #0b234a 0%, #09184b 100%);
+  box-shadow: 0 20px 30px -6px rgba(9, 24, 75, 0.5);
+}
+
+.packageCards .purchase:hover,
+.packageDetail .purchase:focus {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+@media (max-width: 768px) {
+  .packageInfo{
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-block: 1rem;
+    justify-content: flex-start;
+  }
+  .userInfo{
+    width: 90%;
+  }
+  .avatar{
+    height: 5rem;
+    width: 5rem;
+    bottom: 1rem;
+  }
+  .userDetails{
+    font-size: small;
+  }
+  .user{
+    border-radius: 2rem;
+  }
+  .mainContent{
+    width: 90%;
+  }
+  .mainContent .header{
+    display: none !important;
+  }
+  .package{
+    height: 100%;
+    margin: 0px;
+  }
+  .packageCards{
+    max-width: 85%;
+    height: 85%;
+    padding-top: 20px !important;
+  }
+  .packageDetail{
+   padding-top: 20px !important;
+   padding: 10px !important;
+  }
+  .packageDetail p:nth-child(3){
+    display: none;
+  }
+}
