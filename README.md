@@ -4,7 +4,7 @@ EMLAK BURADA
 ![emlakBurada-Dml](https://github.com/user-attachments/assets/79dd594e-cb9d-4421-941d-fe79aaea3988)
 
 
-POSTGRESQL = https://www.postman.com/dark-shadow-499458/workspace/emlakburadaws/collection/16881411-c99cdcc2-93c8-48ba-aa61-9bce39e07855?action=share&creator=16881411;
+postman = https://www.postman.com/dark-shadow-499458/workspace/emlakburadaws/collection/16881411-c99cdcc2-93c8-48ba-aa61-9bce39e07855?action=share&creator=16881411;
 
 
 emlakBurada uygulaması kullanıcıların kendilerine ait  listing(yayın)‘lerini görebildikleri ve yönetebildikleri bir uygulamadır.
